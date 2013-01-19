@@ -31,11 +31,10 @@
                 <section id="main-content">
                     {{ content | unindent | markdownify }}
                 </section>
+                <aside id="sidebar">
+                    {% include sidebar.html %}
+                </aside>
             </div>
-            <aside id="sidebar">
-                {% include sidebar.html %}
-            </aside>
-
         </div>
     </body>
 </html>
