@@ -27,7 +27,15 @@
             </div>
         </header>
         <div id="content-wrapper">
-            {{ content }}
+            <div class="inner clearfix">
+                <section id="main-content">
+                    {{ content }}
+                </section>
+            </div>
+            <aside id="sidebar">
+                {% include sidebar.html %}
+            </aside>
+
         </div>
     </body>
 </html>
