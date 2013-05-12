@@ -16,9 +16,9 @@
 
 surface.CreateFont( "ChatText",
 	{
-		font = "coolvetica",
+		font = "Helvetica", -- "coolvetica"
 		size = 20,
-		weight = 400
+		weight = 200
 	})
 
 surface.CreateFont("WorkshopLarge",

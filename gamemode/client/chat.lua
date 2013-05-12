@@ -496,7 +496,6 @@ if CLIENT then
 						local sw, sh = surface.GetTextSize("W")
 
 						if #str + len > test.msgBox:GetWide() then
-							MsgN("WTF IS GOING ON :C")
 						end
 					end
 				end
