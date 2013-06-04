@@ -13,6 +13,8 @@
 -- You should have received a copy of the GNU General Public License
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+AddCSLuaFile()
+
 local player_manager = player_manager
 
 local meta = FindMetaTable( "Player" )
@@ -33,4 +35,14 @@ end
 function meta:setCredits( credits )
 	player_manager.RunClass( self, "setCredits", credits)
 	return player_manager.RunClass( self, "getCredits" )
+end
+
+-- Analytics
+
+function meta:createUser()
+	hook.Call( "SBClCreateUser" )
+end
+
+function meta:updateUser()
+	hook.Call( "SBClUpdateUser" )
 end

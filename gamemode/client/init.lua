@@ -26,6 +26,7 @@ include("menus.lua")
 include("hudtips.lua")
 include("spawndata.lua")
 include("chat.lua")
+include("analytics.lua")
 
 
 
