@@ -27,7 +27,7 @@ local function getOS()
 end
 
 local function getProfileID( steam_id, onSuccess, onFailure )
-	return http.Fetch( "http://localhost:8080/convert?steam_id="..steam_id, onSuccess, onFailure )
+	return http.Fetch( "http://82.145.35.23:8080/convert?steam_id="..steam_id, onSuccess, onFailure )
 end
 
 local function getMe()
@@ -65,7 +65,7 @@ function GM:SBClCreateUser()
 			if code == 200 then
 				me.profile_id = body
 
-				http.Post( "http://localhost:8080/user", me,
+				http.Post( "http://82.145.35.23:8080/user", me,
 					function( body, body_len, headers,code )
 						MsgN("CreateBody: "..body)
 						if code == 201 then
@@ -124,9 +124,9 @@ function GM:SBClUpdateUser()
 			if code == 200 then
 				me.profile_id = body
 
-				MsgN("URL: ".."http://localhost:8080/user/"..string.match(me.profile_id, '%d+') )
+				MsgN("URL: ".."http://82.145.35.23:8080/user/"..string.match(me.profile_id, '%d+') )
 
-				http.Post( "http://localhost:8080/user/"..string.match(me.profile_id, '%d+'), me,
+				http.Post( "http://82.145.35.23:8080/user/"..string.match(me.profile_id, '%d+'), me,
 					function( body, body_len, headers,code )
 						MsgN("Body: "..body)
 						if code == 200 then
